@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Aydus_CategoryNewProducts config
+ *
+ * @category   Aydus
+ * @package    Aydus_CategoryNewProducts
+ * @author     Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Aydus_CategoryNewProducts>
+            <version>0.9.0</version>
+        </Aydus_CategoryNewProducts>
+    </modules>
+    <phpunit>
+        <suite>
+            <modules>
+                <Aydus_CategoryNewProducts />
+            </modules>
+        </suite>
+    </phpunit>  
+    <crontab>
+        <jobs>
+            <aydus_categorynewproducts_cron>
+                <schedule>
+                    <cron_expr>0 3 * * *</cron_expr>
+                </schedule>
+                <run>
+                    <model>aydus_categorynewproducts/cron::categoryNewProducts</model>
+                </run>
+            </aydus_categorynewproducts_cron>
+        </jobs>
+    </crontab>    
+    <global> 
+        <helpers>
+            <aydus_categorynewproducts>
+                <class>Aydus_CategoryNewProducts_Helper</class>
+            </aydus_categorynewproducts>        
+            <categorynewproducts>
+                <class>Aydus_CategoryNewProducts_Helper</class>
+            </categorynewproducts>        
+        </helpers> 
+        <models>
+            <aydus_categorynewproducts>
+                <class>Aydus_CategoryNewProducts_Model</class>
+            </aydus_categorynewproducts>        
+        </models>   
+        <resources>
+            <aydus_categorynewproducts_setup>
+                <setup>
+                    <module>Aydus_CategoryNewProducts</module>
+                    <class>Mage_Catalog_Model_Resource_Setup</class>
+                </setup>
+                <connection>
+                    <use>core_setup</use>
+                </connection>
+            </aydus_categorynewproducts_setup>
+        </resources>                   
+    </global>         
+</config>

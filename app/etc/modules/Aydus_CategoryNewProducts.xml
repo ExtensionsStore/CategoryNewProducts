@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!-- 
+/**
+ * Aydus_CategoryNewProducts module
+ *
+ * @category   Aydus
+ * @package    Aydus_CategoryNewProducts
+ * @author     Aydus <davidt@aydus.com>
+ */
+-->
+<config>
+    <modules>
+        <Aydus_CategoryNewProducts>
+             <active>true</active>
+             <codePool>community</codePool>
+        </Aydus_CategoryNewProducts>
+        <Mage_Review>
+        	<depends>
+        		<Aydus_CategoryNewProducts />
+        	</depends>
+        </Mage_Review>
+    </modules>
+</config>

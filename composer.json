@@ -1,0 +1,23 @@
+{
+    "name": "aydus/categorynewproducts",
+    "license": "GPL-3.0",
+    "type": "magento-module",
+    "description": "Cron module to generate new products to categories.",
+    "homepage": "https://github.com/aydus/CategoryNewProducts.git",
+    "require": {
+        "php": ">=5.3",
+        "phpunit/phpunit": "3.7.*",
+        "magento/core": "1.9.0.1",
+        "magento-hackathon/magento-composer-installer": "*"
+    },
+    "authors": [
+        {
+            "name": "David Tay",
+            "email": "davidt@aydus.com",
+            "role": "Author/Maintainer"
+        }
+    ],
+    "extra": {
+        "magento-root-dir": "ls -l"
+    }
+}
